@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Auto complete Search bar</title>
+   <link rel="stylesheet" href="/public/build/tailwind.css">
+   <!-- unicons CDN -->
+   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+   <div class="w-full h-screen bg-blue-500 flex flex-col items-center justify-center">
+      <div class="w-11/12 md:w-8/12 xl:w-1/2 h-auto p-5 rounded-3xl bg-white flex flex-col">
+         <!-- First section (search bar container) -->
+         <section class="w-full h-10 flex items-center">
+            <!-- Search icon container -->
+            <span class="w-10 h-full hidden md:flex items-center">
+               <i class="uil uil-search-alt text-xl text-blue-800"></i>
+            </span>
+            <!-- Input -->
+            <input type="text" class="w-full h-full font-medium md:pl-2 focus:outline-none searchInput"
+               placeholder="Search what you want ...">
+            <!-- Search button -->
+            <button
+               class="w-28 h-full bg-blue-800 flex justify-center items-center rounded-2xl text-white font-medium">Search</button>
+         </section>
+         <!-- Second section (results container) -->
+         <section class="w-full h-auto hidden flex-col gap-y-2 mt-8 resultsContainer"></section>
+      </div>
+   </div>
+
+   <script type="module" src="/src/js/index.js"></script>
+</body>
+
+</html>
